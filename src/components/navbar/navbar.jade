@@ -1,0 +1,15 @@
+nav.navbar.navbar-static-top.navbar-inverse(ng-controller="NavbarCtrl")
+  .container-fluid
+    .navbar-header
+      a.navbar-brand(href="https://github.com/Swiip/generator-gulp-angular")
+        span.glyphicon.glyphicon-home Gulp Angular
+    .collapse.navbar-collapse(id="bs-example-navbar-collapse-6")
+      ul.nav.navbar-nav
+        li.active
+          a(ng-href="#")
+        li
+          a(ng-href="#")
+        li
+          a(ng-href="#")
+      ul.nav.navbar-nav.navbar-right
+        li Current date: {{ date | date:'yyyy-MM-dd' }}

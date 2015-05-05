@@ -1,0 +1,23 @@
+.container
+  div(ng-include="'components/navbar/navbar.html'")
+  .jumbotron.text-center
+    h1 'Allo, 'Allo!
+    p.lead
+      img(src="common/images/yeoman.png" alt="I'm Yeoman")
+      br
+      |Always a pleasure scaffolding your apps.
+    p
+      a.btn.btn-lg.btn-success(ng-href="#") Splendid!
+  .row
+    .col-sm-6.col-md-4(ng-repeat="awesomeThing in awesomeThings | orderBy:'rank'")
+      .thumbnail
+        img.pull-right(ng-src="common/images/{{awesomeThing.logo}}" alt="{{awesomeThing.title}}")
+        .caption
+          h3 {{awesomeThing.title}}
+          p {{awesomeThing.description}}
+          p
+            a(ng-href="{{awesomeThing.url}}") {{awesomeThing.url}}
+  hr
+  .footer
+  p With ♥ from
+    a(href="https://twitter.com/Swiip") @Swiip
